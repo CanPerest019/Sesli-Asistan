@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------------
 
 **Uyarı**
-Kod Daha Geliştirme Aşamasındadır Kodda Herhangi Bir Hata OLabilir Aldığınız Hataları Bana Discord yoluyla Bildiriniz.(MyAccount:canxd22)
+Kod Daha Geliştirme Aşamasındadır Kodda Herhangi Bir Hata OLabilir Aldığınız Hataları Bana Discord yoluyla Bildiriniz.(MyDiscord : canxd22)
 
 ----------------------------------------------------------------------------------------
 
