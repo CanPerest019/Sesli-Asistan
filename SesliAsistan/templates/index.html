@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesli Asistan</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Sesli Asistan</h1>
+    
+    <form id="dataset-form" enctype="multipart/form-data">
+        <label for="dataset">Veri Seti Yükle:</label>
+        <input type="file" id="dataset" name="file" required>
+        <button type="submit">Yükle</button>
+    </form>
+
+    <form id="command-form">
+        <label for="command">Komut Girin:</label>
+        <input type="text" id="command" name="command" required>
+        <button type="submit">Gönder</button>
+    </form>
+
+    <form id="firefox-open-form">
+        <button type="submit">Firefox Aç</button>
+    </form>
+
+    <form id="firefox-search-form">
+        <label for="search-query">Arama Yap:</label>
+        <input type="text" id="search-query" name="query" required>
+        <button type="submit">Ara</button>
+    </form>
+
+    <script>
+        document.getElementById('dataset-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const response = await fetch('/upload-dataset/', {
+                method: 'POST',
+                body: formData,
+            });
+            const result = await response.json();
+            alert(result.message);
+        });
+
+        document.getElementById('command-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const command = document.getElementById('command').value;
+            const response = await fetch('/process-command/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ command }),
+            });
+            const result = await response.json();
+            alert(result.response);
+        });
+
+        document.getElementById('firefox-open-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const response = await fetch('/firefox-open/', {
+                method: 'POST',
+            });
+            const result = await response.json();
+            alert(result.message);
+        });
+
+        document.getElementById('firefox-search-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const query = document.getElementById('search-query').value;
+            const response = await fetch('/firefox-search/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ query }),
+            });
+            const result = await response.json();
+            alert(result.message);
+        });
+    </script>
+</body>
+</html>
