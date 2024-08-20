@@ -23,10 +23,10 @@ Kodda, sesli asistanın işlevselliğini sağlamak için çeşitli kütüphanele
 * pygame: Ses dosyalarını çalmak için kullanılır.
 * Threading: Paralel işlemler yapmak için kullanılır, böylece FastAPI ve Tkinter arayüzü aynı anda çalışabilir.
 
-**Uygulamanın Başlatılması**
+** Uygulamanın Başlatılması
 Uygulama, FastAPI ile başlatılır ve başlangıçta model ve vektörleştirici için global değişkenler tanımlanır.
 
-**Komut Modelinin Tanımlanması**
+** Komut Modelinin Tanımlanması
 CommandRequest adında bir Pydantic modeli tanımlanır. Bu model, kullanıcının sesli komutunu içerir ve gelen verilerin doğruluğunu sağlamak için kullanılır.
 
 **Sesli Konuşma Fonksiyonu**
