@@ -13,15 +13,15 @@ Bu Python kodu, kullanıcıdan sesli komutlar alarak belirli yanıtlar verebilen
 **Gerekli Kütüphanelerin Kullanımı**
 Kodda, sesli asistanın işlevselliğini sağlamak için çeşitli kütüphaneler kullanılmaktadır:
 
-*Tkinter: Kullanıcı arayüzünü oluşturmak için grafik kullanıcı arayüzü (GUI) sağlar.
-*FastAPI: Asenkron web uygulaması geliştirmek için kullanılır; API uç noktaları tanımlamak için idealdir.
-*Pydantic: Gelen verileri doğrulamak ve yapılandırmak için kullanılır
-*Sklearn: Makine öğrenimi modelleri oluşturmak için kullanılır; burada metin verilerini işlemek için Naive Bayes sınıflandırıcısı ve CountVectorizer kullanılır.
-*gTTS (Google Text-to-Speech): Metni sesli olarak okumak için kullanılır.
-*Pandas: Veri analizi ve işleme için kullanılır; CSV dosyaları ile çalışmak için idealdir.
-*Requests: Veri setlerini indirmek için HTTP istekleri yapmak için kullanılır
-*pygame: Ses dosyalarını çalmak için kullanılır.
-*Threading: Paralel işlemler yapmak için kullanılır, böylece FastAPI ve Tkinter arayüzü aynı anda çalışabilir.
+* Tkinter: Kullanıcı arayüzünü oluşturmak için grafik kullanıcı arayüzü (GUI) sağlar.
+* FastAPI: Asenkron web uygulaması geliştirmek için kullanılır; API uç noktaları tanımlamak için idealdir.
+* Pydantic: Gelen verileri doğrulamak ve yapılandırmak için kullanılır
+* Sklearn: Makine öğrenimi modelleri oluşturmak için kullanılır; burada metin verilerini işlemek için Naive Bayes sınıflandırıcısı ve CountVectorizer kullanılır.
+* gTTS (Google Text-to-Speech): Metni sesli olarak okumak için kullanılır.
+* Pandas: Veri analizi ve işleme için kullanılır; CSV dosyaları ile çalışmak için idealdir.
+* Requests: Veri setlerini indirmek için HTTP istekleri yapmak için kullanılır
+* pygame: Ses dosyalarını çalmak için kullanılır.
+* Threading: Paralel işlemler yapmak için kullanılır, böylece FastAPI ve Tkinter arayüzü aynı anda çalışabilir.
 
 **Uygulamanın Başlatılması**
 Uygulama, FastAPI ile başlatılır ve başlangıçta model ve vektörleştirici için global değişkenler tanımlanır.
