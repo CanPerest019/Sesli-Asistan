@@ -1,4 +1,4 @@
-<h1 align = 'Center'>CAN'S Voice Assistant</h1>
+<h1 align = 'Center'>Sesli Asistan</h1>
 
 ----------------------------------------------------------------------------------------
 
